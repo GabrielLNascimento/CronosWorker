@@ -1,0 +1,14 @@
+Criar arquivo:
+Nome do componente + module + css
+Ex: Button.module.css
+
+01. Criar a classe normal (css) dentro do module.css
+
+02. importar o "style" do arquivo criado
+ex: import styles from './Button.module.css'
+
+03. Ao usar a classe, como seria:
+style.NomeClasse
+
+Obs:
+* Extensão CSS Module instalado
