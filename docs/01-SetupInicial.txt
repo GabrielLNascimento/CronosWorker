@@ -1,0 +1,2 @@
+comando para iniciar -> seguir as instruções
+-- npm create vite@latest .
