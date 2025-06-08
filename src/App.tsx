@@ -1,19 +1,19 @@
 import './styles/theme.css';
 import './styles/global.css';
 
-import { Heading } from './components/Heading';
-import { Timer } from 'lucide-react';
+// Components
+import { Container } from './components/Container';
 
 function App() {
-    console.log('Estou no console');
     return (
         <>
-            <Heading>
-                Seja bem vindos ao meu site
-                <button>
-                    <Timer />
-                </button>
-            </Heading>
+            <Container>
+                <section>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi voluptate nisi repellendus minima possimus rerum at
+                    quam itaque ratione voluptatibus?
+                </section>
+            </Container>
         </>
     );
 }
