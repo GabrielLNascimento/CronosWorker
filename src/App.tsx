@@ -1,14 +1,19 @@
-import "./styles/theme.css"
-import "./styles/global.css"
+import './styles/theme.css';
+import './styles/global.css';
 
-import Button from "./components/Button";
+import { Heading } from './components/Heading';
+import { Timer } from 'lucide-react';
 
 function App() {
     console.log('Estou no console');
     return (
         <>
-            <h1>Ola pessoal</h1>
-            <Button />
+            <Heading>
+                Seja bem vindos ao meu site
+                <button>
+                    <Timer />
+                </button>
+            </Heading>
         </>
     );
 }
