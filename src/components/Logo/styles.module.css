@@ -4,4 +4,22 @@
     align-items: center;
     justify-content: center;
     gap: 2.4rem;
+    margin-top: 6.4rem;
+}
+
+.logoLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.logoLink svg {
+    width: 6.4rem;
+    height: 6.4rem;
 }

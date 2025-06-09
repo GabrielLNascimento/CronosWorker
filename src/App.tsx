@@ -3,10 +3,14 @@ import './styles/global.css';
 
 // Components
 import { Container } from './components/Container';
+import { Logo } from './components/Logo';
 
 function App() {
     return (
         <>
+            <Container>
+                <Logo />
+            </Container>
             <Container>
                 <section>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
