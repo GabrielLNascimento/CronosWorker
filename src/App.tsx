@@ -4,6 +4,8 @@ import './styles/global.css';
 // Components
 import { Container } from './components/Container';
 import { Logo } from './components/Logo';
+import { Menu } from './components/Menu';
+import { CountDown } from './components/CountDown';
 
 function App() {
     return (
@@ -11,12 +13,13 @@ function App() {
             <Container>
                 <Logo />
             </Container>
+
             <Container>
-                <section>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Sequi voluptate nisi repellendus minima possimus rerum at
-                    quam itaque ratione voluptatibus?
-                </section>
+                <Menu />
+            </Container>
+
+            <Container>
+                <CountDown />
             </Container>
         </>
     );

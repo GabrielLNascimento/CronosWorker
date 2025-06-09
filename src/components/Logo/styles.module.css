@@ -17,6 +17,11 @@
     font-weight: bold;
     text-decoration: none;
     color: var(--primary);
+    transition: .3s;
+}
+
+.logoLink:hover {
+    filter: brightness(70%)
 }
 
 .logoLink svg {
