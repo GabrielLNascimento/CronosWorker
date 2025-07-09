@@ -35,7 +35,7 @@ function App() {
                         />
                     </div>
 
-                    <div className='formRow'>
+                    <div className="formRow">
                         <Cycles />
                     </div>
                 </form>

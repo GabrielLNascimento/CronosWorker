@@ -8,7 +8,7 @@ export function Cycles() {
                 <span className={`${styles.cycleDot} ${styles.workTime}`}></span>
                 <span className={`${styles.cycleDot} ${styles.shortBreakTime}`}></span>
                 <span className={`${styles.cycleDot} ${styles.longBreakTime}`}></span>
-            </div>
+            </div> 
         </div>
     )
 }
