@@ -1,25 +1,42 @@
-import { SunIcon, SettingsIcon, HistoryIcon, HouseIcon } from 'lucide-react';
+import {
+    SunIcon,
+    SettingsIcon,
+    HistoryIcon,
+    HouseIcon,
+    Moon,
+} from 'lucide-react';
 import styles from './styles.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type AvaliableThemes = 'dark' | 'light';
 
 export function Menu() {
-    const [theme, setTheme] = useState<AvaliableThemes>('dark');
+    const [theme, setTheme] = useState<AvaliableThemes>(() => {
+        const theme = localStorage.getItem('theme') as AvaliableThemes;
+        return theme || 'dark';
+    });
 
-    const handleTheme = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        event.preventDefault()
-        setTheme(prevTheme => {
-            const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', nextTheme);
-            return nextTheme;
+    const handleTheme = (
+        event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    ) => {
+        event.preventDefault();
+        setTheme((prevtheme) => {
+            return prevtheme === 'dark' ? 'light' : 'dark';
         });
-        
-    }
-    
+    };
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const nextTheme = {
+        dark: <SunIcon />,
+        light: <Moon />,
+    };
+
     return (
         <>
-        {theme}
             <nav className={styles.menu}>
                 <a
                     href="#"
@@ -29,6 +46,7 @@ export function Menu() {
                 >
                     <HouseIcon />
                 </a>
+
                 <a
                     href="#"
                     className={styles.menuLink}
@@ -37,6 +55,7 @@ export function Menu() {
                 >
                     <HistoryIcon />
                 </a>
+
                 <a
                     href="#"
                     className={styles.menuLink}
@@ -45,6 +64,7 @@ export function Menu() {
                 >
                     <SettingsIcon />
                 </a>
+
                 <a
                     href="#"
                     className={styles.menuLink}
@@ -52,7 +72,7 @@ export function Menu() {
                     title="Mudar tema"
                     onClick={(event) => handleTheme(event)}
                 >
-                    <SunIcon />
+                    {nextTheme[theme]}
                 </a>
             </nav>
         </>
